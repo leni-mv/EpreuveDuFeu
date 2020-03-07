@@ -1,15 +1,12 @@
 #!/bin/python3.6
+#Une lettre sur deux en majuscule, les autres en minuscules !
+#Yeah ! Tu PeUx Le FaIrE !!! \o/
 
 a = input("Ecris ce que tu veux : ")
+b = a.split()
 
-a = a.split()
-b = a[0::2]
-c = a[1::2]
+i = b[0][0::2]
+j = b[0][1::2]
 
-b = str(b)
-c = str(c)
-b = b.upper()
-c = c.lower()
-d = b + c
-
-print(d)
+for i, j in b:
+    print(i.upper(), j.lower())

@@ -8,42 +8,29 @@ l2 = ""
 for ligne in f1: #mise des valeurs du fichier1 dans une
     l1+=ligne    #variable manipulable !
 f1.close()
-print(l1)
 
 
 for ligne in f2: #mise des valeurs du fichier2 dans une
     l2+=ligne    #variable manipulable !
 f2.close()
+
+print(l1)
 print(l2)
+print(len(l2))
+print()
 
-#création d'une fonction pour "colorier"
-#valeurs de l2 identiques à l1.
-"""
-def dépistage():
-    for i in l2:
-        if i == l1:
-            colorier i
-            print(i)
-        elif i != l1:
-            print(i)
-        else:
-            print("La fonction fonctionne !")
-"""
+b = ""
+j = 0
 
-
-
-for l1 in l2:           #Boucle qui vérifie présence des
-    if l1 in l2:        #valeur de l1 dans l2
-        for i in l2:
-            if i == l1:
-                #colorier i
-                print(i)
-            elif i != l1:
-                print(i)
-            else:
-                print("La fonction fonctionne !")
+for i in l2:        #boucle pour "colorier"
+    if i == l1.isdigit():     #valeurs de l2 identiques à l1.
+        b = '\033[35m' + i + '\033[0m'
+        j+=1     
+    elif i != l1:
+        b+=i
+        j+=1
     else:
-        print("la boucle fonctionne")
+        j == len(l2)
         break
 
-
+print(b)

@@ -8,29 +8,40 @@ l2 = ""
 for ligne in f1: #mise des valeurs du fichier1 dans une
     l1+=ligne    #variable manipulable !
 f1.close()
-
+#passage de liste à array pour l1:
+l1 = l1.split()
 
 for ligne in f2: #mise des valeurs du fichier2 dans une
     l2+=ligne    #variable manipulable !
 f2.close()
+#passage de liste à array pour l2:
+l2 = l2.split()
 
-print(l1)
-print(l2)
-print(len(l2))
-print()
+def suite(l1, l2, x, y):
+    x2 = 0
+    while x2 < l1.count():
+        y2 = 0
+        while y2 < l1.count():
+            if l1[x2][y2] != l2[x + x2][y + y2]:
+                return False
+            else:
+                y2+=1
+        x2+=1
+    return True
 
-b = ""
-j = 0
-
-for i in l2:        #boucle pour "colorier"
-    if i == l1.isdigit():     #valeurs de l2 identiques à l1.
-        b = '\033[35m' + i + '\033[0m'
-        j+=1     
-    elif i != l1:
-        b+=i
-        j+=1
-    else:
-        j == len(l2)
-        break
-
-print(b)
+def rectangle(l1, l2):
+    x = 0
+    while x < l2.count():
+        y = 0
+        while y < l2[x].count():
+            if l2[x][y] == l1[0][0]:
+                if suite(l1, l2, x, y):
+                    print(f"{x}, {y}")
+                    return True
+            elif l2[x][y] != l1[0][0]:
+                y+=1
+        x+=1
+    print("pas trouvé ~-~")
+    return False
+            
+rectangle(l1, l2)

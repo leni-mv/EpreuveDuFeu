@@ -8,17 +8,8 @@ for lignes in chemin:
     mots+=lignes
 chemin.close
 mots = mots.split()
+b = []
 
-mot2 = 0
-l1 = 0
-l2 = 0
-n = 0
+#trier chaque lettres de chaque mots
 
-for mot1 in mots:
-    print(mot1)
-    print()
-    for mot2 in mots:
-        print(mot2)
-    
-    
-
+#comparer chaque mot

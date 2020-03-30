@@ -19,9 +19,9 @@ l2 = l2.split()
 
 def suite(l1, l2, x, y):
     x2 = 0
-    while x2 < l1.count():
+    while x2 < len(l1):
         y2 = 0
-        while y2 < l1.count():
+        while y2 < len(l1):
             if l1[x2][y2] != l2[x + x2][y + y2]:
                 return False
             else:
@@ -31,13 +31,14 @@ def suite(l1, l2, x, y):
 
 def rectangle(l1, l2):
     x = 0
-    while x < l2.count():
+    x2 = 0
+    while x < len(l2):
         y = 0
-        while y < l2[x].count():
+        y2 = 0
+        while y < len(l2[x]):
             if l2[x][y] == l1[0][0]:
-                if suite(l1, l2, x, y):
-                    print(f"{x}, {y}")
-                    return True
+                print(f"{x}, {y}")
+                return True
             elif l2[x][y] != l1[0][0]:
                 y+=1
         x+=1

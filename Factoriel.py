@@ -2,7 +2,7 @@
 
 n = input("Calculer la factoriel de : ")
 n = int(n)
-
+print(n)
 def fact(n):
     if n < 2:
         return 1

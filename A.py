@@ -2,10 +2,9 @@
 
 import sys
 
-f1 = sys.argv[1]
-f2 = sys.argv[2]
+f1 = ["arbre"]
+f2 = "/home/leni/Pop/repos/EpreuveDuFeu/fr.txt"
 
-print(f1)
 with open(f2) as f:
     mots = f.read().splitlines()
 
@@ -22,10 +21,8 @@ for i in mots:
             for j in mots[x2]:                        #Ensuite on compare la correspondance des lettres
                 if sorted(mots[x2]) == sorted(f1[0]): 
                     anagram+=j                        
-mot_trouvé = anagram.split()                   # On transforme le mot en liste.
-
-#Et on additionne les deux listes !
+mot_trouvé = anagram.split()                   # On transforme le mot en liste pour l'additionner
+                                               # au premier
+#Et on regarde le résultat ! <3
 f1+=mot_trouvé
 print(f1)
-            
-

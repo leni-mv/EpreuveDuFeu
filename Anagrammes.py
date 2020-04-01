@@ -2,10 +2,11 @@
 
 import sys
 
-f1 = sys.argv[1]
+l1 = sys.argv[1]
 f2 = sys.argv[2]
 
-print(f1)
+f1 = l1.splitlines()
+
 with open(f2) as f:
     mots = f.read().splitlines()
 

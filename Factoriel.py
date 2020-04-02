@@ -1,4 +1,5 @@
 #!/bin/python3.6
+#bloup
 
 n = input("Calculer la factoriel de : ")
 n = int(n)

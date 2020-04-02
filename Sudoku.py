@@ -13,7 +13,7 @@ c4 = [0, 1, 2]
 #création de la variable qui va vérifier chaque valeurs
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 n = []
-for i in n:
+for i in b:
     i = str(i)
     n+=i
 
@@ -25,13 +25,13 @@ while l < len(s2): #ça ça fonctionne !
             c+=1
         elif c == "-":
             l+=1
-        elif s2[l][c] in n[x]:      #Erreur index or de la liste
-            print("n")
-            #if s2[l][c] == n:
-             #   n-=s2[l][c]
-              #   c+=1
-            #elif s2[l][c] == "_":
-             #   s2[l][c]+=n
-        c+=1
+        elif n[x] in s2[l][c]:
+            if c == n[x]:
+                n.pop(x)
+                c+=1
+            elif s2[l][c] == "_":
+                s2[l][c].replace("_", n[x])
+                x+=1
+            c+=1
     l+=1
 print(s2)

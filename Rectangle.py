@@ -37,6 +37,7 @@ def rectangle(l1, l2):
         y2 = 0
         while y < len(l2[x]):
             if l2[x][y] == l1[0][0]:
+                suite(l1, l2, x, y)
                 print(f"{x}, {y}")
                 return True
             elif l2[x][y] != l1[0][0]:

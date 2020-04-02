@@ -12,6 +12,9 @@ c4 = [0, 1, 2]
 """Soit on définie une/des valeurs spécifiques pour les
 carrés, Soit on délimite l et c : s2[l:l+2][c:c+2]"""
 
-for l in s2:
-    for c in len(s2[l]):
+while l < len(s2):
+    l = 0
+    while c < len(s2[l]):
         print("ok!")
+        c+=1
+    l+=1

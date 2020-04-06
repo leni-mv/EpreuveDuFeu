@@ -1,13 +1,16 @@
 #!/bin/python3.6
 
-n = input("Calculer la factoriel de : ")
+n = "3"
 n = int(n)
 liste = []
 #créer la liste int pour mieux la manipuler
-for l in range(n):
-    liste+=l
+for i in n:
+    liste+=i
+    n-=1
 print(liste)
+#for i in liste[l]:
     
+
     
     
     

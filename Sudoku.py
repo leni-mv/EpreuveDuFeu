@@ -23,7 +23,7 @@ while l < len(s2):
     l = 0
     while c < len(s2[l]):   #ça ça fonctionne !
         c = 0
-        liste_temoin()
+        n = liste_temoin()
         x = 0
         if c in n[x]:      #ça ça fonctionne pas
             print("ok")

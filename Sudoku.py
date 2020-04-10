@@ -31,11 +31,14 @@ def init_array():
     new_array = []
     val = 1
     while val < 10:
-        new_array[val] = 0
+        print("truc")
+        if new_array.append(sudoku[i][j]):
+            new_array[val] = 0
         val+=1
     return(new_array)
 
 def check_line(sudoku, i):
+    print("l")
     array = init_array()
     j = 0
     while j < len(sudoku[i]):
@@ -48,6 +51,7 @@ def check_line(sudoku, i):
     return True
 
 def check_column(sudoku, j):
+    print("c")
     array = init_array()
     i = 0
     while i < len(sudoku):
@@ -60,6 +64,7 @@ def check_column(sudoku, j):
     return True
 
 def check_square(sudoku, i, j):
+    print("c")
     array = init_array()
     square_begin_i = (i/4)*4
     square_begin_j = (j/4)*4
@@ -79,13 +84,14 @@ def solve_sudoku(sudoku):
     i = 0
     while i < len(sudoku):
         j = 0
-        while j < len(sudoku[i]):
-            if sudoku[i][j] == 0:
+        while j < len(sudoku[i]): #là il passe 8fois : est-ce les 0 du sudoku
+            print("ok!")
+            if sudoku[i][j] == 0: #là il passe une fois
                 new_value = 1
                 while new_value < 10:
                     sudoku[i][j] = new_value
-                    if check_line(sudoku, i) and check_column(sudoku, j) and check_square(sudoku, i, j): #après cette ligne
-                        sudoku = solve_sudoku(sudoku)                                                    #je ne sais pas comment
+                    if check_line(sudoku, i) and check_column(sudoku, j) and check_square(sudoku, i, j): #après cette ligne je ne sais
+                        sudoku = solve_sudoku(sudoku)                                                    #pas comment vérifier mon code
                         if sudoku != False:
                             return sudoku                        
                     new_value+=1
@@ -95,23 +101,6 @@ def solve_sudoku(sudoku):
 
 solve_sudoku(sudoku)
 
-    
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Créer une fonction principale pour vérifier les 3 secondaire
-#rajouté les caractères spéciaux et print la liste
 
 #Bien afficher le sudoku
 #for i in range(0,9):

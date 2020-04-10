@@ -28,14 +28,12 @@ for i in range(0,9):
 
 #Créer fonctions pour vérifier sudoku
 def init_array():
-    new_array = []
-    val = 1
-    while val < 10:
-        print("truc")
-        if new_array.append(sudoku[i][j]):
-            new_array[val] = 0
-        val+=1
-    return(new_array)
+    new_array = 9*[0]
+    val = 0
+    while val < 9:
+        new_array[val] = 9*[0]
+    val+=1
+    return new_array
 
 def check_line(sudoku, i):
     print("l")

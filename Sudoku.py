@@ -24,10 +24,55 @@ for i in range(0,9):
     for j in range(0,9):
         sudoku[i][j] = int(s2[i][j])
 
+"""comparaison = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+lst_sudoku = [[1, 9, 5, 7, 8, 4, 2, 0, 0], [7, 6, 1, 2, 3, 5, 8, 0, 4], [9, 2, 0, 4, 1, 8, 5, 7, 6]]"""
+
+def colonne(sudoku, colonne):
+    lst_col = []
+    for i in range(len(sudoku)):
+        lst_col.append(sudoku[i][colonne])
+    return lst_col
+
+"""for num in comparaison:
+    if num not in lst_sudoku:
+        resultat.append(num)"""
+comparaison = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in range(len(sudoku)):
+    for j in range(len(sudoku[i])):       
+        if sudoku[i][j] == 0:
+            res = []
+            temp = colonne(sudoku, j)
+            for num in comparaison:                
+                if num not in sudoku[i] and num not in temp:
+                    res.append(num)
+            sudoku[i][j] = res[0]
+            res.pop(0)
+
+#Bien afficher le sudoku
+for val in range(0,9):
+    print(sudoku[val])
+print(sudoku)
+
+"""l44
+resultat = []
+        for num in comparaison:
+            if num not in sudoku[i]:
+                resultat.append(num)"""
+
+    
+        
+    #trouver index du premier 0
+    # bloquer index de cette élément et avancer dans les lignes
+    # enregistrer/comparer ces éléments  
+
+
+
+
+
 
 
 #Créer fonctions pour vérifier sudoku
-def init_array():
+'''def init_array():
     new_array = 9*[0]
     val = 0
     while val < 9:
@@ -48,13 +93,13 @@ def check_line(sudoku, i):
         j+=1
     return True
 
-def check_column(sudoku, j):
-    print("c")
-    array = init_array()
-    i = 0
-    while i < len(sudoku):
-        val = sudoku[i][j]
-        if val > 0 and val < 10 :
+def check_column(sudoku, j):     #def init_array():
+    print("c")                      #new_array = []
+    array = init_array()            #val = 1
+    i = 0                           #while val < 10:
+    while i < len(sudoku):          #   new_array[val] = 0
+        val = sudoku[i][j]          #   val+=1
+        if val > 0 and val < 10 :#return(new_array)
             array[val]+=1
             if array[val] > 1:
                 return False
@@ -102,4 +147,4 @@ solve_sudoku(sudoku)
 
 #Bien afficher le sudoku
 #for i in range(0,9):
- #   print(sudoku[i])
+ #   print(sudoku[i])'''

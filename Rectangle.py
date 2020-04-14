@@ -2,6 +2,7 @@
 
 f1 = open("/home/leni/Pop/repos/EpreuveDuFeu/file1.txt", "r")
 f2 = open("/home/leni/Pop/repos/EpreuveDuFeu/file2.txt", "r")
+print(f2)
 l1 = ""
 l2 = ""
 

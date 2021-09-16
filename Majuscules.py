@@ -1,6 +1,5 @@
 #!/bin/python3.6
 #Une lettre sur deux en majuscule, les autres en minuscules !
-#Yeah ! Tu PeUx Le FaIrE !!! \o/
 
 a = input("Ecris les mots ou les phrases que tu veux : ")
 j = 0

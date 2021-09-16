@@ -1,19 +1,13 @@
 #!/bin/python3.6
-# #8h17
-#9h22-9h49 la sèche
-#en yeutant l'ancien ficher je me rend compte que j'ai encore mal compris la consigne =w='
-#9h58 en ayant compris la consigne..
-#10h40 mots trouver now mise en page
-#fini à 10h46, now mot doit être un input
-#10h52 tout est parfaitement coder pour être fonctionnel dans le terminal linux ^^
+# Anagramme refait en moins de 3h (8h17-10h52)
 import sys
 
 file = open("/home/leni/Pop/repos/EpreuveDuFeu/fr.txt", "r")  #associer fichier à utiliser
 mot = sys.argv[1]
 
 l1 = ""
-for ligne in file: #mise des valeurs du fichier1 dans une
-    l1+=ligne    #variable manipulable !
+for ligne in file: #mise des valeurs du fichier1 dans une variable manipulable !
+    l1+=ligne    
 file.close()
 #passage de liste à array pour l1:
 l1 = l1.split()

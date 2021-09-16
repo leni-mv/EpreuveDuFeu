@@ -1,8 +1,6 @@
 #créer des index et liste de listes pour povoir noter la position
 # quand position trouvée, vérifier que les chiffres suivant du tab 2 correspondent à ceux du tab 1
-#14h23-15h30
-#15h40-16h
-#16h17-16h25 j'arrête sinon je vais craquer
+#14h23 - 16h25
 
 p = open("/home/leni/Pop/repos/EpreuveDuFeu/file1.txt", "r")
 G = open("/home/leni/Pop/repos/EpreuveDuFeu/file2.txt", "r")

@@ -1,11 +1,4 @@
-#trier liste d'éléments n'importe laquelle
-#gérer la donner pour la int et liste ou argv[i]
-#15h43 #16h10 je ne sais pas comment placer le flag pour ne pas avoir d'erreurs
-#16h11-16h35 pause
-#trouver un moyen de répéter l'opération autant de fois que néscessaire
-#17h08 SANS REGARDER !! I'M BG !!!
-#17h08-17h26 test dans le terminal ET ajout des lignes 10-13 (pour mettre chiffres que l'on veut) et 32-35 (pour une sortie plus jolie ^^)
-#1h pile pour résoudre l'énoncé + 18min (de glande) pour rendre ça jolie et exécutable dans le terminal
+#Ttrier n'importe quelle liste d'élément, résolu en 1h + 20min de pause.
 
 éléments = input("nombres :")
 élément = []

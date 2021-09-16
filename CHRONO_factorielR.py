@@ -1,5 +1,5 @@
 #calculer la factoriel de n'importe quel nombre
-#15h35 #15h41 en re-regardant la formule pour être sûr X)
+#Entre 15h35 et 15h41
 
 n = input("Calcule la super factoriel de :")
 n = int(n)
